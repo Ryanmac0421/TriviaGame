@@ -1,0 +1,59 @@
+.questions {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    color: rgb(3, 3, 66);
+    
+}
+.wrapper {
+    background-color: olivedrab;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    font-size: 15px;
+}
+
+body {
+    background-color: black;
+    background-image: url(images/water.jpg);
+    background-size: cover; 
+    width: 100%;
+
+
+}
+
+.jumbotron {
+    background-color: rgb(3, 3, 66);
+    
+}
+
+p {
+    font-size: 40px;
+    color: white;
+}
+
+h4 {
+    color: white;
+    font-size: 50px;
+    background-color: rgb(3, 3, 66);
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: cursive;
+    padding: 15px;
+    
+
+}
+
+.finish {
+    text-align: center;
+    
+}
+
+.submitButton {
+    width: 15%;
+    margin-bottom: 20px;
+    margin-left: 475px;
+    padding: 40px;
+  
+}
