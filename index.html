@@ -20,161 +20,53 @@
 
 <body>
 <div class="conatiner">
+    <!--Hold all the questions,header,timer-->
     <div class="wrapper">  
-        
-        <div class="jumbotron text-center">
-            <div class="Header">
-                <h1>Wild Trivia Game!!</h1>
-            </div>
+    
+    <!--The header-->
+    <div class="jumbotron text-center">
+        <div class="Header">
+            <h1>Totally Trivial Trivia!!</h1>
         </div>
+    </div>
+    
+    <div class="startBtn text-center">
+        <button id="start">Start</button>
+    </div>
+    
+    
+        <div class="endGame text-center">
+            <h1 id="score"></h1>
+            <button id="restart">Restart</button>
+        </div>
+    
 
+    <div class="game">
+      <!--The timer for the game-->
         <div class="Timer text-center" id="CountDown">
-            <h4>Time Remaining:<br>
+            <h4 id="timer">Time Remaining:<br>
                 120 Seconds</h4>
         </div>
         <br><br>
 
 
-        <!-- This is where i start the question text for the game -->
+        <!-- This is where i start the question text for the game(on screen) -->
 
 
-        <div clHow many colours are there in a rainbow?ass="questions" id="question1">
-            <p></p> <!--7-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> One
-                <input type="radio" name="gender" value="female"> Five
-                <input type="radio" name="gender" value="other"> Seven
-                <input type="radio" name="gender" value="other"> Nine
-            </form>
+    <div class="questions" id="question1">
+            
         </div>
-        <br><br>
+     
 
-        <div class="questions" id="question2">
-            <p>What do you call a time span of one thousand years? </p><!--Millenium-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Years
-                <input type="radio" name="gender" value="female"> Continuum
-                <input type="radio" name="gender" value="other"> Decade
-                <input type="radio" name="gender" value="other"> Millenium
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question3">
-            <p>How many degrees are found in a circle?</p><!--360-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> 360
-                <input type="radio" name="gender" value="female"> 90
-                <input type="radio" name="gender" value="other"> 540
-                <input type="radio" name="gender" value="other"> 180
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question4">
-            <p>How many points does a compass have? </p><!--32-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> 51
-                <input type="radio" name="gender" value="female"> 32
-                <input type="radio" name="gender" value="other"> 12
-                <input type="radio" name="gender" value="other"> 40
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question5">
-            <p>What is the bluebird of symbol of?</p><!--Happiness-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Happiness
-                <input type="radio" name="gender" value="female"> Joy
-                <input type="radio" name="gender" value="other"> Anger
-                <input type="radio" name="gender" value="other"> Love
-            </form>
-        </div>
-        <br><br>
-        <div class="questions" id="question6">
-            <p>When did the world celebrate its most recent millennium? </p><!--Year 2000-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> 2010
-                <input type="radio" name="gender" value="female"> 1900
-                <input type="radio" name="gender" value="other"> 1950
-                <input type="radio" name="gender" value="other"> 2000
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question7">
-            <p>Name the world's largest ocean?</p><!--Pacific-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Red Sea
-                <input type="radio" name="gender" value="female"> Atlantic Ocean
-                <input type="radio" name="gender" value="other"> Pacific Ocean
-                <input type="radio" name="gender" value="other"> Arctic Ocean
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question8">
-            <p>What is the world's longest river?</p><!--Amazon-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Nicaraquan River
-                <input type="radio" name="gender" value="female"> Sacramento River
-                <input type="radio" name="gender" value="other"> Amazon River
-                <input type="radio" name="gender" value="other"> Whitewater River
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question9">
-            <p>What is the capital city of Spain?</p><!--Madrid-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Madrid
-                <input type="radio" name="gender" value="female"> Montilla
-                <input type="radio" name="gender" value="other"> San Fernando
-                <input type="radio" name="gender" value="other"> Algeciras
-            </form>
-        </div>
-        <br><br>
-
-        <div class="questions" id="question10">
-            <p>What colour jersey is worn by the winners of each stage of the Tour De France? </p><!--Yellow-->
-            <form action="">
-                <input type="radio" name="gender" value="male"> Orange
-                <input type="radio" name="gender" value="female"> Yellow
-                <input type="radio" name="gender" value="other"> Blue
-                <input type="radio" name="gender" value="other"> Green
-            </form>
-        </div>
-        <br><br>
-        <br><br>
     
-       
-        <div class="submitButton">
+
+        <div class="submitButton text-center">
             <input type="submit" value="Submit!" class="finish" >
         </div>
-
-
-        
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div> 
-
+    </div>
 </div>
+</div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -182,7 +74,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="assets/app.js"></script>
 </body>
 
 </html>

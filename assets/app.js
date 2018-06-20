@@ -38,4 +38,86 @@ var questionArr = [
     {   question:"What colour jersey is worn by the winners of each stage of the Tour De France?",
         choices:['Orange','Yellow','Blue','Green'],
         ans:'Yellow'
-    }],
+    }]
+
+    var questionNum = 0;
+    var correctNum = 0;
+    var seconds = 120;
+    var isGame = false;
+
+
+
+
+    function displayQuestion() {
+        $("#question1").html(
+            '<p>'+questionArr[questionNum]["question"]+'</p> '+
+            '<form>'+
+            '<input class="ques" type="radio"   name="q" value="'+questionArr[questionNum]["choices"][0]+'"> '+questionArr[questionNum]["choices"][0]+
+            ' <input class="ques" type="radio"  name="q" value="'+questionArr[questionNum]["choices"][1]+'">'+questionArr[questionNum]["choices"][1]+
+            '  <input class="ques" type="radio" name="q" value="'+questionArr[questionNum]["choices"][2]+'"> '+questionArr[questionNum]["choices"][2]+
+            '  <input class="ques" type="radio" name="q" value="'+questionArr[questionNum]["choices"][3]+'"> '+questionArr[questionNum]["choices"][3]+
+            '</form>'
+        )
+
+        
+    }
+
+    $( document ).ready(function() {
+    
+    $("#start").on("click", ()=>{
+        $(".startBtn").css("display", "none");
+        $(".game").css("display", "initial");
+        isGame = true;
+        displayQuestion()
+
+    })
+    $(".submitButton").on("click", ()=>{
+        $(".ques").each( (index,element) => {
+            if ($(element).is( ":checked" )) {
+             if ($(element).attr("value")==questionArr[questionNum]["ans"]) {
+                correctNum ++;
+             }   
+            }
+           console.log($(element).attr("value")) 
+        });
+    
+        questionNum ++;
+        if (questionNum  >= questionArr.length) {
+        $(".game").css("display", "none");
+        $(".endGame").css("display", "initial");
+        $("#score").text("your score is " +correctNum + " out of 10 ")
+        } else {
+        displayQuestion()
+            
+        }
+        
+        
+
+
+    })
+
+    $("#restart").on("click", ()=>{
+        $(".endGame").css("display", "none");
+        $(".game").css("display", "initial");
+        correctNum = 0;
+        questionNum = 0;
+        seconds = 120;
+        displayQuestion()
+
+    })
+    setInterval(function(){ 
+        
+        if (isGame) {
+            
+            seconds --;
+            $("#timer").html("Time Remaining:<br>"+seconds+" Seconds");
+         }
+
+        if (seconds <= 0) {
+        $(".game").css("display", "none");
+        $(".endGame").css("display", "initial");
+        $("#score").text("your score is " +correctNum + " out of 10 ")
+         }
+
+    }, 1000);
+});

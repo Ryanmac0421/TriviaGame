@@ -1,30 +1,42 @@
+:root{
+    --myBlue:rgb(3, 3, 66);
+}
+
+
 .questions {
     text-align: center;
     width: 100%;
     font-size: 30px;
-    color: rgb(3, 3, 66);
+    color: var(--myBlue);
     
 }
 .wrapper {
     background-color: olivedrab;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     color: white;
     font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container {
+    margin-top: 15px;
 }
 
 body {
     background-color: black;
     background-image: url(images/water.jpg);
-    background-size: cover; 
+   
     width: 100%;
 
 
 }
 
 .jumbotron {
-    background-color: rgb(3, 3, 66);
+    background-color: olivedrab;
+    color: white;
+    font-size: 400px;
     
 }
 
@@ -36,7 +48,7 @@ p {
 h4 {
     color: white;
     font-size: 50px;
-    background-color: rgb(3, 3, 66);
+    background-color: var(--myBlue);
     margin-left: 30%;
     margin-right: 30%;
     font-family: cursive;
@@ -53,7 +65,73 @@ h4 {
 .submitButton {
     width: 15%;
     margin-bottom: 20px;
-    margin-left: 475px;
+    margin-left: 410px;
     padding: 40px;
   
+}
+
+.header {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: cursive;
+}
+
+input {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.game {
+    display: none;
+}
+
+.startBtn {
+    padding: 75px;
+    background-color: olivedrab;
+    padding-bottom: 25%
+
+}
+ 
+#start {
+    width: 40%;
+    height: 100%;
+    padding: 50px;
+    font-size: 30px;
+    background-color: var(--myBlue);
+    border: 0%;
+    border-width: 0px;
+    color: white;
+}
+#restart {
+    width: 40%;
+    height: 100%;
+    padding: 50px;
+    font-size: 30px;
+    background-color: var(--myBlue);
+    border: 0%;
+    border-width: 0px;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 290px;
+    margin-bottom: 15px;
+}
+.endGame {
+    display: none;
+    text-align: center;
+    
+    background-color: olivedrab;
+  
+
+}
+
+.score {
+    margin-bottom: 15px;
+}
+
+#restart {
+    
 }
